@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixNex</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <h1>🎬 Buscador de Películas</h1>
+            <p>Encuentra tus películas favoritas</p>
+        </header>
+
+        
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Buscar películas..." 
+                    id="searchInput"
+                >
+                <button class="search-btn" id="searchBtn">
+                    🔍 Buscar
+                </button>
+            </div>
+            
+            <div class="filters">
+                <select class="filter-select" id="yearFilter">
+                    <option value="">Todos los años</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+                
+                <select class="filter-select" id="genreFilter">
+                    <option value="">Todos los géneros</option>
+                    <option value="action">Acción</option>
+                    <option value="comedy">Comedia</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Terror</option>
+                    <option value="romance">Romance</option>
+                    <option value="sci-fi">Ciencia Ficción</option>
+                </select>
+                
+                <select class="filter-select" id="sortFilter">
+                    <option value="relevance">Relevancia</option>
+                    <option value="year">Año</option>
+                    <option value="rating">Calificación</option>
+                    <option value="title">Título</option>
+                </select>
+            </div>
+        </section>
+
+        
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Buscando películas...</p>
+        </div>
+
+        
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <div class="results-count" id="resultsCount">
+                    Se encontraron 0 películas
+                </div>
+            </div>
+        </section>
+
+        <div class="movies-grid" id="moviesGrid">
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <span>Sin imagen</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Título de la Película</h3>
+                    <div class="movie-year">2024</div>
+                    <div class="movie-genre">Acción, Aventura</div>
+                    <div class="movie-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-number">8.5</span>
+                    </div>
+                    <p class="movie-description">
+                        Esta es una descripción de ejemplo de la película. Aquí irá el resumen de la trama...
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <span>Sin imagen</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Otra Película</h3>
+                    <div class="movie-year">2023</div>
+                    <div class="movie-genre">Comedia, Drama</div>
+                    <div class="movie-rating">
+                        <span class="stars">⭐⭐⭐⭐</span>
+                        <span class="rating-number">7.2</span>
+                    </div>
+                    <p class="movie-description">
+                        Descripción de otra película de ejemplo para mostrar cómo se ve la estructura...
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="no-results" id="noResults">
+            <div class="no-results-icon">🎭</div>
+            <h3>No se encontraron películas</h3>
+            <p>Intenta con otros términos de búsqueda</p>
+        </div>
+
+        
+        <div class="pagination" id="pagination" style="display: none;">
+            <button class="pagination-btn" id="prevBtn" disabled>← Anterior</button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn" id="nextBtn">Siguiente →</button>
+        </div>
+
+        <footer class="footer">
+            <p>© 2024 Buscador de Películas - Hecho para aprender JavaScript</p>
+        </footer>
+    </div>
+</body>
+</html>
